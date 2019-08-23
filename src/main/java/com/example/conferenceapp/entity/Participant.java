@@ -1,13 +1,17 @@
 package com.example.conferenceapp.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Participant {
+    public Participant() {
+    }
+
+    public Participant(String name, String birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+
     private String name;
     private String birthday;
 }
