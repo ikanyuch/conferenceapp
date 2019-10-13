@@ -27,7 +27,7 @@ export default class ConferenceForm extends React.Component{
     onSubmit(e){
         e.preventDefault();
 
-        if(!this.state.name || !this.state.dateTime || !this.state.conferenceRoom){
+        if(!this.state.name || !this.state.dateTime ){
             this.setState(()=>({error:'Please set data'}));
         }else{
             this.setState(()=>({error:''}));
@@ -35,7 +35,7 @@ export default class ConferenceForm extends React.Component{
                 name:this.state.name,
                 dateTime:this.state.dateTime
                 }
-            )
+            );
         }
     }
     render(){
